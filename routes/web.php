@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SongController::class, 'index'])->name('home');
+Route::get('/', function(){
+    return view('homepage');
+})->name('home');
+
+Route::resource('songs', SongController::class);
