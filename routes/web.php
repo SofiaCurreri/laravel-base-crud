@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    return view('homepage');
-})->name('home');
+Route::get('/', [PageController::class, 'index'])->name('home');
 
 Route::resource('songs', SongController::class);
