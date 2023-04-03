@@ -41,6 +41,11 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'author' => 'required',
+        ]);
+
         $data = $request->all();
 
         $song = new Song;     
@@ -57,7 +62,7 @@ class SongController extends Controller
         $song->fill($data);
         
         $song->save();
-        return redirect()->route('songs.show', $song); 
+        return redirect()->route('songs.show', $song);  
     }
 
     /**
