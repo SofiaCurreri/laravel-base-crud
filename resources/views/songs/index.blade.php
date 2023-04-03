@@ -6,10 +6,10 @@
     <table class="table table-dark table-striped">
         <thead>
             <tr>
-              <th scope="col">Titolo</th>
-              <th scope="col">Album</th>
-              <th scope="col">Autore</th>
-              <th scope="col">Durata</th>
+              <th scope="col"> Titolo </th>
+              <th scope="col"> Album </th>
+              <th scope="col"> Autore </th>
+              <th scope="col"> Durata </th>
             </tr>
           </thead>
 
