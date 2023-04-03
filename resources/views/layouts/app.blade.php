@@ -7,13 +7,14 @@
     <title>{{ env('APP_NAME')}} - @yield('page_name')</title>
 
     @vite('resources/js/app.js')
+    @yield('cdn')
 </head>
 <body>
     @include('partials.header')
 
     <main>
         <section class="container">
-            <h1 class="my-5">@yield('page_name')</h1>
+            <h1 class="my-5 text-light">@yield('page_name')</h1>
             @yield('main_content')
         </section>
     </main>
