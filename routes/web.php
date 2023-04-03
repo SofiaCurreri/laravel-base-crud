@@ -27,3 +27,6 @@ Route::get('songs/{song}', [SongController::class, 'show'])->name('songs.show');
 
 //Rotta per form creazione risorsa
 Route::get('songs/create', [SongController::class, 'create'])->name('songs.create');
+
+//Rotta per salvare dati form creazione risorsa
+Route::post('songs', [SongController::class, 'store'])->name('songs.store');
