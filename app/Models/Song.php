@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Song extends Model
 {
     use HasFactory;
+
+    //campi riempibili col fill() che hai usato in SongController -> create()
+    protected $fillable = ["title", "album", "author", "editor", "length", "poster"];
 }

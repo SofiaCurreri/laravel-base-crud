@@ -4,6 +4,7 @@
 
 @section('main_content')
     <form action="{{ route('songs.store') }}" method="POST" class="row gy-3 gx-5">
+        @csrf
         <div class="col-3">
             <label for="title" class="form-label">Titolo</label>
             <input type="text" class="form-control" id="title" name="title">

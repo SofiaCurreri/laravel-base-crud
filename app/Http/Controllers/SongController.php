@@ -43,13 +43,19 @@ class SongController extends Controller
     {
         $data = $request->all();
 
-        $song = new Song;           
-        $song->title = $data["title"];
-        $song->album = $data["album"];
-        $song->author = $data["author"];
-        $song->editor = $data["editor"];
-        $song->length = $data["length"];
-        $song->poster = $data["poster"];
+        $song = new Song;     
+        
+        //METODO 1
+        // $song->title = $data["title"];
+        // $song->album = $data["album"];
+        // $song->author = $data["author"];
+        // $song->editor = $data["editor"];
+        // $song->length = $data["length"];
+        // $song->poster = $data["poster"];
+
+        //METODO 2
+        $song->fill($data);
+        
         $song->save();
 
     }
