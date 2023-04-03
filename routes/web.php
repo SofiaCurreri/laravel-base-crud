@@ -17,4 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'index'])->name('home');
 
-Route::resource('songs', SongController::class);
+// Route::resource('songs', SongController::class);
+
+//Rotta per lista risorsa
+Route::get('songs', [SongController::class, 'index'])->name('songs.index');
+
+//Rotta per dettaglio risorsa
+Route::get('songs/{song}', [SongController::class, 'show'])->name('songs.show');
+
+//Rotta per form creazione risorsa
+Route::get('songs/create', [SongController::class, 'create'])->name('songs.create');

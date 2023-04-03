@@ -7,10 +7,16 @@
 @section('page_name', 'Lista Brani')
     
 @section('main_content')
-  <form class="d-flex my-4" role="search">
-    <input class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
+  <div class="row my-3">
+    <form class="col-8 d-flex">
+      <input class="form-control me-2" type="text" name="term" placeholder="Search">
+      <button class="btn btn-outline-success my-0" type="submit">Search</button>
+    </form>
+
+    <div class="col-4 d-flex">
+      <a href="{{ route('songs.create') }}" type="button" class="btn btn-outline-success ms-auto">Aggiungi Brano</a>
+    </div>
+  </div>
 
     <table class="table table-dark table-striped">
         <thead>
