@@ -7,6 +7,11 @@
 @section('page_name', 'Lista Brani')
     
 @section('main_content')
+  <form class="d-flex my-4" role="search">
+    <input class="form-control me-2" type="search" name="title" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
     <table class="table table-dark table-striped">
         <thead>
             <tr>
