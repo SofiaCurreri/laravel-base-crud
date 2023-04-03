@@ -57,7 +57,7 @@ class SongController extends Controller
         $song->fill($data);
         
         $song->save();
-
+        return redirect()->route('songs.show', $song); 
     }
 
     /**
