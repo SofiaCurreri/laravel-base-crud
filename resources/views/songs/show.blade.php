@@ -11,7 +11,7 @@
      <div class="col"><strong>Durata:</strong> {{$song->length}}</div>
   </div>
   <div class="row my-5 text-light">
-    <strong> Copertina album:</strong>
+    <strong class="mb-3"> Copertina album:</strong>
     <img src="{{$song->poster}}" class="card-img-top" alt="album poster" style="width: 300px;">
   </div>
 @endsection

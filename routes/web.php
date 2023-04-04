@@ -30,3 +30,9 @@ Route::resource('songs', SongController::class);
 
 //Rotta per salvare dati form creazione
 // Route::post('songs', [SongController::class, 'store'])->name('songs.store');
+
+//Rotta per form modifica risorsa
+// Route::get('songs/{song}/edit', [SongController::class, 'edit'])->name('songs.edit');
+
+//Rotta per aggiornare risorsa post modifica
+// Route::put('songs/{song}/update', [SongController::class, 'update'])->name('songs.update');
