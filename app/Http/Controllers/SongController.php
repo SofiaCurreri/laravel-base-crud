@@ -42,8 +42,30 @@ class SongController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'author' => 'required',
+            'title' => 'required|string|max:50',
+            'album' => 'nullable|string|max:50',
+            'author' => 'required|string|max:50',
+            'editor' => 'nullable|string|max:50',
+            'length' => 'nullable|date_format:H:i:s',
+            'poster' => 'nullable|string'
+        ], [
+            'title.required' => 'Il titolo è obbligatorio',
+            'title.string' => 'Il titolo deve essere una stringa',
+            'title.max' => 'Il titolo può avere al massimo 50 caratteri',
+
+            'album.string' => 'L\' album deve essere una stringa',
+            'album.max' => 'L\' album può avere al massimo 50 caratteri',
+
+            'author.required' => 'L\' autore è obbligatorio',
+            'author.string' => 'L\' autore deve essere una stringa',
+            'author.max' => 'L\' autore può avere al massimo 50 caratteri',
+
+            'editor.string' => 'L\' editore deve essere una stringa',
+            'editor.max' => 'L\' editore può avere al massimo 50 caratteri',
+
+            'length.date_format' => 'Il formato della durata deve essere di tipo time (00:00:00)',
+
+            'poster.string' => 'L\' immagine di copertina deve essere una stringa'
         ]);
 
         $data = $request->all();
