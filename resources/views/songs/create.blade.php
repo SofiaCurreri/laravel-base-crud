@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{ route('songs.store') }}" method="POST" class="row gy-3 gx-5">
+    <form action="{{ route('songs.store') }}" method="POST" class="row gy-3 gx-5 text-light">
         @csrf
 
         <div class="col-3">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="col-12 d-flex">
-            <button type="submit" class="btn btn-outline-success ms-auto">Salva</button>
+            <button type="submit" class="btn btn-outline-primary me-auto my-5">Salva</button>
         </div>
     </form>
 @endsection
