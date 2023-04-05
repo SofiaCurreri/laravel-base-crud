@@ -36,13 +36,17 @@
                     <td>{{ $song->album }}</td>
                     <td>{{ $song->author }}</td>
                     <td>{{ $song->length }}</td>
-                    <td>
-                      <a href="{{ route('songs.show', ['song' => $song]) }}" class="text-center">
+                    <td class="d-flex justify-content-evenly">
+                      <a href="{{ route('songs.show', ['song' => $song]) }}">
                         <i class="bi bi-box-arrow-up-right"></i>
                       </a>
 
-                      <a href="{{ route('songs.edit', ['song' => $song]) }}" class="text-center">
+                      <a href="{{ route('songs.edit', ['song' => $song]) }}" class="text-warning">
                         <i class="bi bi-pencil-fill"></i>
+                      </a>
+
+                      <a href="{{ route('songs.destroy', ['song' => $song]) }}" class="text-danger">
+                        <i class="bi bi-trash3-fill"></i>
                       </a>
                     </td>
                 </tr>
